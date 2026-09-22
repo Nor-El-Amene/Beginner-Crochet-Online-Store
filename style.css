@@ -1,0 +1,104 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2b2b;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Top Bar */
+.top-bar {
+  padding: 10px 40px;
+  font-size: 12px;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f0ed;
+  padding: 15px 40px;
+  color: #222;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #222;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-color: #f4f0ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.subtext {
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: white;
+  color: black;
+}

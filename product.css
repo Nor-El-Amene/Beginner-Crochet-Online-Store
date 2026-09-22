@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.product-page {
+  display: flex;
+  padding: 60px 80px;
+  align-items: flex-start;
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-column img {
+  width: 120px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.divider {
+  width: 1px;
+  background: #ccc;
+  margin: 0 40px;
+  height: 500px;
+}
+
+.details-column {
+  max-width: 600px;
+}
+
+.product-title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.product-subtitle {
+  margin: 0 0 30px 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.feature,
+.description,
+.materials {
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.feature strong,
+.description strong,
+.materials strong {
+  color: #000;
+}
+
+.dimensions {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}

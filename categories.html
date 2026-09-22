@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Minimal Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #f9f5f1, #f3eee9);
+      color: #3b2f2f;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #5a4632;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #7c5a3d;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 1rem;
+    }
+
+    /* Subtle divider under header */
+    header::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #a17958;
+      margin: 20px auto 0;
+      border-radius: 2px;
+      opacity: 0.6;
+    }
+
+    /* Back button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      color: #5a4632;
+      border: 1px solid #a17958;
+      border-radius: 25px;
+      text-decoration: none;
+      background: transparent;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    .back-btn:hover {
+      background: #a17958;
+      color: #fff;
+    }
+
+    /* Grid */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      background: #fff;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+    }
+    .category-card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .category-info {
+      padding: 20px;
+    }
+    .category-info h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #4a3728;
+    }
+    .category-info p {
+      margin: 6px 0 14px;
+      font-size: 0.9rem;
+      color: #7c6a58;
+    }
+
+    /* View Collection button */
+    .view-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      background: #a17958;
+      color: #fff;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    }
+    .view-btn:hover {
+      background: #5a4632;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="ex.html" class="back-btn">← Back to Shop</a>
+
+  <header>
+    <h1>Shop by Category</h1>
+    <p>Discover timeless handmade pieces that bring warmth, authenticity, and elegance to your lifestyle.</p>
+  </header>
+
+  <section class="category-grid">
+    <div class="category-card">
+      <img src="毛糸の小花のラグ_ﾏｯﾄ.png" alt="Tapis">
+      <div class="category-info">
+        <h2>Tapis</h2>
+        <p>Handwoven with heritage</p>
+        <a href="tapis.html" class="view-btn">View Collection</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="download (57).png" alt="Mug">
+      <div class="category-info">
+        <h2>Vases</h2>
+        <p>Vases for everyday rituals</p>
+        <a href="mug.html" class="view-btn">View Collection</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="Crochet Miffy glasses holder _ Crochet Boris glasses holder _ Miffy tray _ Boris tray - Cute desk Organizer, Desk Accessory & Gift Idea.jpg" alt="Accessoires">
+      <div class="category-info">
+        <h2>Accessoires</h2>
+        <p>Unique accents to elevate your style</p>
+        <a href="accessoires.html" class="view-btn">View Collection</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="download (56).jpg" alt="Bags">
+      <div class="category-info">
+        <h2>Bags</h2>
+        <p>Handcrafted elegance for modern life</p>
+        <a href="chat.html" class="view-btn">View Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll animation for cards
+    const cards = document.querySelectorAll('.category-card');
+    window.addEventListener('scroll', () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          card.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display',serif;
+      background: #fdfaf6; /* creamy background */
+      color: #3b2b1d; /* dark brown text */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 8%;
+    }
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(253, 250, 246, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+.product-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.2s; }
+.product-card:nth-child(2) { animation-delay: 0.4s; }
+.product-card:nth-child(3) { animation-delay: 0.6s; }
+.product-card:nth-child(4) { animation-delay: 0.8s; }
+.product-card:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    .back-btn {
+        margin-top: 15px;
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        font-size: 1rem;
+        color: #5a3e2b;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+        }
+
+    .back-btn:hover {
+        color: #a17958;
+        transform: translateX(-5px);
+        }
+    header h1 {
+      margin-left: 30px;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #5a3e2b; /* medium brown */
+    }
+
+    .cart {
+      font-size: 1rem;
+      color: #7a5a3a;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 8%;
+    }
+
+    .hero-text {
+      max-width: 45%;
+    }
+
+    .hero-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #4b3621;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+      color: #6e5440;
+    }
+
+    .hero-text .btn {
+      padding: 12px 24px;
+      border: 2px solid #a17958;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, #d3b88c, #a17958);
+      transition: 0.3s;
+    }
+
+    .hero-text .btn:hover {
+      background: linear-gradient(135deg, #a17958, #d3b88c);
+    }
+
+    .hero img {
+      max-width: 45%;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .hero img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Filters (tags like fashion, travel, etc.) */
+    .filters {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    
+    
+
+    .filters span {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      color: #6e5440;
+      border: 1px solid #d3b88c;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filters span:hover {
+      background: #d3b88c;
+      color: white;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 8% 60px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #eee1d2;
+      transition: 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #4b3621;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #7a5a3a;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #a17958;
+      margin-bottom: 10px;
+    }
+    .hero-text, .hero img {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease forwards;
+        }
+
+    .hero img {
+        animation-delay: 0.3s;
+        }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+        body {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+img {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    .scroll-indicator {
+
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: #7a5a3a;
+        animation: bounce 1.5s infinite;
+        }
+
+    @keyframes bounce {
+        0%, 100% { transform: translate(-50%, 0); }
+        50% { transform: translate(-50%, -10px); }
+        }
+    
+
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.view-details {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(161, 121, 88, 0.9); /* creamy brown */
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  opacity: 0;
+  font-size: 0.8rem;
+  text-decoration: none; /* remove underline */
+  transition: 0.3s ease;
+}
+
+.product-card:hover .view-details {
+  opacity: 2;
+}
+
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <a href="ex.html" class="back-btn">← Back</a>
+    <h1>TOT-BAGS</h1>
+    <div class="cart">Cart (0)</div>
+  </header>
+  
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Handmade Crochets Tot-Bags</h2>
+      <p>Crafted with premium lenses to bring elegance and protection to your stuff.</p>
+      
+    </div>
+    <img src="file_000000000e9461f9b1caf37743fabef3(1).png" alt="Hero Product">
+  </section>
+  <div class="scroll-indicator">↓</div>
+  <!-- Filters -->
+  <div class="filters">
+    <a href="BROWN.html"><span>Brown</span></a>
+    <a href="beige.html"><span>Green</span></a>
+    <a href="white.html"><span>White</span></a>
+    <a href="yellow.html"><span>Yellow</span></a>
+  </div>
+
+  <!-- Products -->
+  <section class="products">
+    <div class="product-card">
+      <img src="Crochet Mesh Tote Bag _ Moss Green Version .jpg" alt="">
+      <a href="product1.html" class="view-details">View Details</a>
+      <h3>Crochet Mesh Tote Bag _ Moss Green Version 🍀</h3>
+      <p>Green</p>
+      <p class="price">$12.00</p>
+    </div>
+
+    <div class="product-card">
+      <img src="download (56).jpg" alt="">
+      <a href="product1.html" class="view-details">View Details</a>
+      <h3>Mini Tot-Bag</h3>
+      <p>Multi-Colors</p>
+      <p class="price">$11.85</p>
+    </div>
+
+    <div class="product-card">
+      <img src="Cat Patch Crochet Pattern.png" alt="">
+      <a href="product1.html" class="view-details">View Details</a>
+      <h3>Cat Patch Crochet Pattern</h3>
+      <p>Brown</p>
+      <p class="price">$5.38</p>
+    </div>
+
+    <div class="product-card">
+      <img src="download (58).png" alt="">
+      <a href="product1.html" class="view-details">View Details</a>
+      <h3>Light-Green Tot-Bag</h3>
+      <p>Light-Green</p>
+      <p class="price">$15.58</p>
+    </div>
+
+    <div class="product-card">
+      <img src="download (60).png" alt="">
+      <a href="product1.html" class="view-details">View Details</a>
+      <h3>Brown cat theme Tot-Bag</h3>
+      <p>Brown</p>
+      <p class="price">$9.24</p>
+    </div>
+  </section>
+
+</body>
+</html>

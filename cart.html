@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f3;
+      color: #5a4632;
+    }
+
+    .cart-container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #5a4632;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      font-weight: 600;
+      color: #a17958;
+    }
+
+    td img {
+      width: 60px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .quantity input {
+      width: 50px;
+      text-align: center;
+      padding: 5px;
+      border: 1px solid #a17958;
+      border-radius: 8px;
+    }
+
+    .total-section {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cart-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 1px solid #a17958;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-shop {
+      background: transparent;
+      color: #5a4632;
+    }
+    .btn-shop:hover {
+      background: #a17958;
+      color: #fff;
+    }
+
+    .btn-update {
+      background: transparent;
+      color: #5a4632;
+    }
+    .btn-update:hover {
+      background: #a17958;
+      color: #fff;
+    }
+
+    .btn-checkout {
+      background: #a17958;
+      color: #fff;
+      border: none;
+    }
+    .btn-checkout:hover {
+      background: #5a4632;
+    }
+    .remove-btn {
+    background: #a17958; /* soft background */
+
+    color: #fff;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .remove-btn:hover {
+    background: #5a4632; /* soft red hover */
+    color: #fff;
+    border-color: #5a4632;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: scale(1.05);
+  }
+  </style>
+</head>
+<body>
+
+  <div class="cart-container">
+    <h1>Your Shopping Cart</h1>
+
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+
+      <!-- Example Item -->
+      <tr>
+        <td><img src="generated-image.png" alt="item"></td>
+        <td>Handmade Crochet Bag</td>
+        <td>$25</td>
+        <td class="quantity"><input type="number" value="1" min="1"></td>
+        <td>$25</td>
+      </tr>
+
+      <tr>
+        <td><img src="generated-image.png" alt="item"></td>
+        <td>Wool Scarf</td>
+        <td>$15</td>
+        <td class="quantity"><input type="number" value="2" min="1"></td>
+        <td>$30</td>
+      </tr>
+    </table>
+
+    <div class="total-section">
+      <p><strong>Total: $55</strong></p>
+    </div>
+
+    <div class="cart-buttons">
+      <a href="ex.html" class="btn btn-shop">Back to Shop</a>
+      <button class="btn btn-update">Update Cart</button>
+      <button class="btn btn-checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to update cart totals
+    function updateCart() {
+      let rows = document.querySelectorAll("table tr:not(:first-child)");
+      let total = 0;
+
+      rows.forEach(row => {
+        let priceText = row.querySelector("td:nth-child(3)").textContent.replace("$", "");
+        let price = parseFloat(priceText);
+        let qty = parseInt(row.querySelector("input").value);
+        let subtotal = price * qty;
+        let subtotalCell = row.querySelector("td.subtotal");
+if (subtotalCell) {
+  subtotalCell.querySelector(".subtotal-value").textContent = `$${subtotal}`;
+}
+        total += subtotal;
+      });
+
+      document.querySelector(".total-section p strong").textContent = `Total: $${total}`;
+    }
+
+    // Add event listener to update button
+    document.querySelector(".btn-update").addEventListener("click", updateCart);
+
+    // Also update automatically when quantity changes
+    document.querySelectorAll(".quantity input").forEach(input => {
+      input.addEventListener("change", updateCart);
+    });
+   document.querySelectorAll("table tr:not(:first-child)").forEach(row => {
+    let td = document.createElement("td");
+    let btn = document.createElement("button");
+    btn.textContent = "Remove";
+    btn.classList.add("remove-btn");
+    btn.onclick = () => row.remove();
+    td.appendChild(btn);
+    row.appendChild(td);
+  });
+  </script>
+
+</body>
+</html>
