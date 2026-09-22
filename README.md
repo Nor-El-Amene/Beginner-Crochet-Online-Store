@@ -2,7 +2,7 @@
 
 A front-end online store website for a fictional crochet shop, designed and developed as my **first front-end web development project**.
 
-## 📌 Project Background
+##  Project Background
 
 This was my first website project when I was a complete beginner in front-end development.
 
@@ -35,13 +35,13 @@ Visitors can:
 
 ---
 
-## ✨ Main Pages
+##  Main Pages
 
-### 🏠 Home Page
+###  Home Page
 
 The landing page introduces the crochet store and highlights different collections.
 
-### 🛍️ Categories
+###  Categories
 
 Products are organized into different categories such as:
 
@@ -50,7 +50,7 @@ Products are organized into different categories such as:
 - Accessories
 - Vases
 
-### 👜 Tote Bags Collection
+###  Tote Bags Collection
 
 The tote-bag collection contains several products and separate category/color pages.
 
@@ -62,7 +62,7 @@ The project uses a simple page-based filtering approach, with separate pages for
 - Yellow
 - Beige
 
-### 📦 Product Details
+###  Product Details
 
 The project includes a product-detail page containing:
 
@@ -75,7 +75,7 @@ The project includes a product-detail page containing:
 - Care instructions
 - Add-to-cart interface
 
-### 🛒 Shopping Cart
+###  Shopping Cart
 
 The website includes a shopping-cart interface displaying:
 
@@ -87,17 +87,17 @@ The website includes a shopping-cart interface displaying:
 - Remove buttons
 - Cart actions
 
-### 👩‍🎨 About Us
+###  About Us
 
 A fictional artisan profile and story page describing the concept behind the crochet shop.
 
-### 📩 Contact
+###  Contact
 
 A contact page containing a simple contact form.
 
 ---
 
-## 🖼️ Screenshots
+##  Screenshots
 
 ### Home Page
 
@@ -129,7 +129,7 @@ A contact page containing a simple contact form.
 
 ---
 
-## 🛠️ Technologies
+##  Technologies
 
 - HTML5
 - CSS3
@@ -137,44 +137,7 @@ A contact page containing a simple contact form.
 
 ---
 
-## 🎯 What I Learned
-
-This project helped me practice:
-
-- Structuring web pages with HTML
-- Creating layouts with CSS
-- Styling cards, buttons, forms, and navigation
-- Linking multiple HTML pages together
-- Organizing website content into different sections
-- Creating product and category pages
-- Building a basic shopping-cart interface
-- Working with images and website assets
-- Understanding how different pages of a website connect together
-- Improving my visual design and front-end development skills
-
----
-
-## 📚 What I Would Improve Today
-
-Since this was my first front-end project, there are several things I would approach differently today.
-
-For example:
-
-- Use a more organized project structure
-- Use reusable components instead of repeating page structures
-- Implement dynamic product filtering
-- Improve responsiveness for different screen sizes
-- Improve accessibility
-- Use cleaner and more consistent naming conventions
-- Separate data from presentation
-- Improve JavaScript functionality
-- Use a more scalable approach for product management
-
-These limitations are part of the project's purpose: **it represents my early stage of learning front-end development.**
-
----
-
-## 📌 Project Status
+##  Project Status
 
 This is a completed beginner-level learning project.
 
@@ -182,7 +145,7 @@ It is not intended to be a production-ready e-commerce platform. It was created 
 
 ---
 
-## 👤 Author
+##  Author
 
 **LANABI NOR EL-AMENE**
 
